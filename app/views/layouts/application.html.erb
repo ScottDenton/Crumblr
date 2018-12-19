@@ -17,10 +17,13 @@
           <div class ="card-text">
               <ul class="nav nav-pills float-right">
                 <li class="nav-item">
-                  <a class="nav-link" href="/">Home</a>
+                  <%= link_to "Home", root_url, class: "nav-link" %>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/about">About</a>
+                  <%= link_to "About", about_url, class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "Manage Posts", posts_url, class: "nav-link" %>
                 </li>
               </ul>
           </div>
@@ -28,15 +31,13 @@
             <h1>
               <%= link_to "crumblr", "/"%>
             </h1>
-            <small class = 'float-right'>//home baked goodness</small>
+            <small class = 'float-right text-muted'>//home baked goodness</small>
           </div>
         </div>
-        <div class = "row">
-
-          <div class = "col-md-6 offset-md-3">
+        <div class = "row justify-content-center">
+          <div class = "col-md-7 ">
             <%= yield %>
           </div>
-
         </div>
 
 
